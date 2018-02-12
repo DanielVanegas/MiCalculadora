@@ -2,41 +2,29 @@ package Calculadora;
 
 public class Calculadora {
 
-    protected int x;
-    protected int y;
-    protected int r;
+    protected float x;
+    private float y;
+    private float r;
 
     void sumar() {
         r = x + y;
     }
 
     void restar() {
-        if (x < y) {
-            int a;
 
-            a = x;
-            x = y;
-            y = a;
-        }
-
-        if (x < 0) {
-            x = -x;
-            y = -y;
-        }
+        r = x - y;
     }
-    
-    public void setX(int x) {
+
+    public void setX(float x) {
         this.x = x;
     }
 
-    public void setY(int y) {
+    public void setY(float y) {
         this.y = y;
     }
 
-    public int getR() {
+    public float getR() {
         return r;
     }
-
-  
     
 }
