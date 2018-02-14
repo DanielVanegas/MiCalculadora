@@ -24,7 +24,6 @@ public class Principal {
         int entrada;
         int x;
         entrada = miEscaner.nextInt();
-        
 
         switch (entrada) {
 
@@ -62,20 +61,19 @@ public class Principal {
 
                 System.out.println("Ingrese la cantidad.");
                 entrada = miEscaner.nextInt();
-                x=(int) (entrada*(3.1416/180));
+
+                x = (int) (entrada * (3.1416 / 180));
                 miTrigo.setX(x);
-                
 
                 System.out.println(miTrigo.coseno());
                 break;
+            }
+
+            default: {
+
+                System.out.println("Opción no valida");
 
             }
-            
-            default: {
-                
-                System.out.println("Opción no valida");
-                
-            }
         }
-}
+    }
 }
