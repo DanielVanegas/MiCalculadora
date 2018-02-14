@@ -60,11 +60,9 @@ public class Principal {
 
                 System.out.println("Ingrese la cantidad.");
                 entrada = miEscaner.nextInt();
-                miCalculadora.setX(entrada);
+                miTrigo.setX(entrada);
 
-                miTrigo.coseno();
-
-                System.out.println(miCalculadora.getR());
+                System.out.println(miTrigo.coseno());
 
             }
             
