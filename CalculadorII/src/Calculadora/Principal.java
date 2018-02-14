@@ -13,26 +13,62 @@ public class Principal {
         //Forma de crear un objeto de la clase escanner
         Scanner miEscaner;
         miEscaner = new Scanner(System.in);
-        
-        Scanner miEscaner2;
-        miEscaner2 = new Scanner(System.in);
+
+        /*Scanner miEscaner2;
+        miEscaner2 = new Scanner(System.in);*/
+        Trigonometrica miTrigo;
+        miTrigo = new Trigonometrica();
+
+        System.out.println("Para sumar escriba 1.");
+        System.out.println("Para restar escriba 2.");
+        System.out.println("Para sacar coseno escriba 3.");
 
         int entrada;
-        String operac;
-        
-        operac = miEscaner2.nextLine();
-
         entrada = miEscaner.nextInt();
-        miCalculadora.setX(entrada);
 
-        entrada = miEscaner.nextInt();
-        miCalculadora.setY(entrada);
-        
-        miCalculadora.sumar();
-        
-        System.out.println(miCalculadora.getR());
+        switch (entrada) {
 
-        CalculadoraTrigonometrica miTrigo=new CalculadoraTrigonometrica();
+            case 1: {
+                
+                System.out.println("Ingrese primer digito.");
+                entrada = miEscaner.nextInt();
+                miCalculadora.setX(entrada);
+                System.out.println("Ingrese segundo digito.");
+                entrada = miEscaner.nextInt();
+                miCalculadora.setY(entrada);
+                miCalculadora.sumar();
+                System.out.println(miCalculadora.getR());
+
+            }
+
+            case 2: {
+
+                System.out.println("Ingrese primer digito.");
+                entrada = miEscaner.nextInt();
+                miCalculadora.setX(entrada);
+                System.out.println("Ingrese segundo digito.");
+                entrada = miEscaner.nextInt();
+                miCalculadora.setY(entrada);
+
+                miCalculadora.restar();
+
+                System.out.println(miCalculadora.getR());
+
+            }
+
+            case 3: {
+
+                System.out.println("Ingrese la cantidad.");
+                entrada = miEscaner.nextInt();
+                miCalculadora.setX(entrada);
+
+                miTrigo.coseno();
+
+                System.out.println(miCalculadora.getR());
+
+            }
+            
+            
+        }
     }
-
 }
