@@ -14,8 +14,6 @@ public class Principal {
         Scanner miEscaner;
         miEscaner = new Scanner(System.in);
 
-        /*Scanner miEscaner2;
-        miEscaner2 = new Scanner(System.in);*/
         Trigonometrica miTrigo;
         miTrigo = new Trigonometrica();
 
