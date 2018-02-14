@@ -22,12 +22,14 @@ public class Principal {
         System.out.println("Para sacar coseno escriba 3.");
 
         int entrada;
+        int x;
         entrada = miEscaner.nextInt();
+        
 
         switch (entrada) {
 
             case 1: {
-                
+
                 System.out.println("Ingrese primer digito.");
                 entrada = miEscaner.nextInt();
                 miCalculadora.setX(entrada);
@@ -36,6 +38,7 @@ public class Principal {
                 miCalculadora.setY(entrada);
                 miCalculadora.sumar();
                 System.out.println(miCalculadora.getR());
+                break;
 
             }
 
@@ -51,6 +54,7 @@ public class Principal {
                 miCalculadora.restar();
 
                 System.out.println(miCalculadora.getR());
+                break;
 
             }
 
@@ -58,13 +62,20 @@ public class Principal {
 
                 System.out.println("Ingrese la cantidad.");
                 entrada = miEscaner.nextInt();
-                miTrigo.setX(entrada);
+                x=(int) (entrada*(3.1416/180));
+                miTrigo.setX(x);
+                
 
                 System.out.println(miTrigo.coseno());
+                break;
 
             }
             
-            
+            default: {
+                
+                System.out.println("Opción no valida");
+                
+            }
         }
-    }
+}
 }
